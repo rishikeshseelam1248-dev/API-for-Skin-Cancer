@@ -12,13 +12,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["https://69628d499fde5ab0388b0f3a--darling-youtiao-37f7ea.netlify.app/"],
+    allow_origins = ["https://comforting-caramel-c4d06a.netlify.app/"],
     allow_credentials = True,
     allow_methods = ["*"],
     allow_headers = ["*"]
 )
 
-MODEL = keras.models.load_model("/Users/srilathayatham/Downloads/Skin_Cancer_Classification/8.keras")
+MODEL = keras.models.load_model("./8.keras")
 class_names = ["Benign", "Malignant Skin Cancer", "Normal"]
 
 
