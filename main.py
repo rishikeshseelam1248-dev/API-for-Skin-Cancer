@@ -24,6 +24,8 @@ class_names = ["Benign", "Malignant Skin Cancer", "Normal"]
 
 def read_file_as_image(data) -> np.ndarray:
     image = np.array(Image.open(BytesIO(data)))
+    if image.mode != 'RGB':
+        image = image.convert('RGB')
     return image
 
 
