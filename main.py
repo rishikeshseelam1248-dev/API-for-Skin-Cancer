@@ -40,9 +40,11 @@ async def predict(
 
     predicted_class = class_names[np.argmax(predictions[0])]
     confidence = (math.floor(np.max(predictions[0]) * 1000)) / 1000
+    estimated_risk = math.floor(predictions[0][1] * 1000) / 1000
     return {
         'class': predicted_class,
-        'confidence': str(confidence * 100)
+        'confidence': str(confidence * 100),
+        "estimated-risk": str(estimated_risk * 100)
     }
 
 if __name__ == "__main__":
