@@ -44,7 +44,7 @@ async def predict(
     return {
         'class': predicted_class,
         'confidence': str(confidence * 100),
-        "estimated-risk": str(estimated_risk * 100)
+        "estimated_risk": str(estimated_risk * 100)
     }
 
 if __name__ == "__main__":
