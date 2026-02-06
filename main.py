@@ -45,7 +45,7 @@ async def predict(
         'class': predicted_class,
         'confidence': str(confidence * 100),
         "estimated_risk": str(estimated_risk * 100),
-        "confidence_array": predictions,
+        "confidence_array": predictions.tolist(),
     }
 
 if __name__ == "__main__":
